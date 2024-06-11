@@ -17,6 +17,5 @@ public interface TeamMembersRepository extends JpaRepository<TeamMembers, Intege
 	@Query("SELECT c FROM TeamMembers c WHERE c.isDeleted = false")
 	public List<TeamMembers>  getAll();
 	
-//	  @Query("DELETE aw FROM TeamMembers aw WHERE aw.id = :id AND aw.isDeleted = false")
 	TeamMembers deleteById(@Param("id") int id);
 }

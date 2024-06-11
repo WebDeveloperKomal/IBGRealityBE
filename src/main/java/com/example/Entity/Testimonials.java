@@ -40,4 +40,7 @@ public class Testimonials {
     @Column(name = "update_time", insertable = false)
     @UpdateTimestamp
     private Date updateTime;
+
+
+
 }

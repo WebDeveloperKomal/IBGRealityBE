@@ -29,6 +29,9 @@ public class TeamMembers {
 	private String name;
 	private String designation;
 	
+//	@Column(name = "image_path")
+//	private String imagePath;
+	
     @Lob
     @Column(name = "emp_image", columnDefinition = "LONGBLOB")
     private byte[] image;

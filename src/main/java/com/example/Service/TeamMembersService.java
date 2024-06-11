@@ -9,6 +9,8 @@ public interface TeamMembersService {
 	
 	TeamMembers saveTeamMembers(TeamMembers teamMembers);
 	
+	byte[] getImageByPath(String imagePath);
+	
 	List<TeamMembers> getAllTeamMembers();
 	
 	TeamMembers getTeamMembersById(int id);

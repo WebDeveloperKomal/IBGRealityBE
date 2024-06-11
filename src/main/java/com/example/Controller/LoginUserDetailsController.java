@@ -64,12 +64,12 @@ public class LoginUserDetailsController {
 	
 	/*-----------------------add-new-user-----------------------*/
 	@PostMapping(value = ("/add-new-user"))
-	private ResponseEntity<Map<String, Object>> saveSlides(@RequestParam String data, Authentication authentication) {
+	private ResponseEntity<Map<String, Object>> saveSlides(@RequestBody String data) {
 		Map<String, Object> response = new HashMap<>();
-		LoginUserDetails loginUserDetails= (LoginUserDetails) authentication.getPrincipal();
+//		LoginUserDetails loginUserDetails = (LoginUserDetails) authentication.getPrincipal();
 		try {
-			JSONParser parser = new JSONParser(data);
-			JSONObject json = (JSONObject) parser.parse();
+			org.json.simple.parser.JSONParser parser = new org.json.simple.parser.JSONParser();
+			JSONObject json = (JSONObject) parser.parse(data);
 
 			LoginUserDetails user = new LoginUserDetails();
 			user.setName(json.get("name").toString());

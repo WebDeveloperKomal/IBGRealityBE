@@ -20,6 +20,14 @@ public class TeamMembersServicesImpl implements TeamMembersService{
 		// TODO Auto-generated method stub
 		return teamMembersRepository.save(teamMembers);
 	}
+	
+	 @Override
+	    public byte[] getImageByPath(String imagePath) {
+			return null;
+	        // Logic to retrieve image bytes from the database using the image path
+	        // You can use the TeamMembersRepository to find the record by imagePath and retrieve the image bytes
+	        // Return the byte array of the image
+	    }
 
 	@Override
 	public List<TeamMembers> getAllTeamMembers() {
